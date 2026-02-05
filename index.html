@@ -1,227 +1,79 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lavanda Audit · Day 1 + Day 2</title>
-  
-  <style>
-    :root {
-      --bg: #0f0f17;
-      --text: #e0e0ff;
-      --accent: #a78bfa;
-      --accent-dark: #7c3aed;
-      --card: #1a1a2e;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<title>IBONARIUM · DAY STACK</title>
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, sans-serif;
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
 
-    header {
-      background: linear-gradient(135deg, #1e1e38, #0f0f17);
-      padding: 2.5rem 1rem 4rem;
-      text-align: center;
-      border-bottom: 1px solid #2a2a4a;
-      position: relative;
-    }
+/* Загальний контейнер */
+.stack {
+    width: 100%;
+}
 
-    h1 {
-      font-size: clamp(2.1rem, 7vw, 4.2rem);
-      margin-bottom: 0.8rem;
-      background: linear-gradient(90deg, #c4b5fd, #a78bfa, #7c3aed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+/* Блок сторінки */
+.page {
+    width: 100%;
+    height: 100vh; /* Кожна сторінка = висота екрана */
+    position: relative;
+}
 
-    .subtitle {
-      font-size: clamp(1.1rem, 4vw, 1.5rem);
-      opacity: 0.85;
-      max-width: 720px;
-      margin: 0 auto;
-    }
+/* iframe */
+.page iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
 
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 0 1rem;
+/* Мобільна оптимізація */
+@media (max-width: 768px) {
+    .page {
+        height: 100vh;
     }
+}
 
-    section {
-      padding: 4rem 0;
-      min-height: 60vh;
+/* Дуже маленькі екрани */
+@media (max-width: 480px) {
+    .page {
+        height: 100vh;
     }
-
-    .day-header {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      color: var(--accent);
-      margin: 1.5rem 0 2rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .day-header::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 4px;
-      background: var(--accent);
-      margin: 1rem auto 0;
-      border-radius: 2px;
-    }
-
-    .content-card {
-      background: var(--card);
-      border-radius: 16px;
-      padding: 2rem;
-      margin: 1.5rem 0;
-      border: 1px solid #2a2a4a;
-      transition: all 0.25s ease;
-    }
-
-    .content-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-      border-color: #4a3b7c;
-    }
-
-    h2, h3 {
-      color: #c4b5fd;
-      margin: 1.4rem 0 0.9rem;
-    }
-
-    h2 { font-size: 1.9rem; }
-    h3 { font-size: 1.45rem; }
-
-    p, li {
-      margin-bottom: 1.1rem;
-      font-size: 1.05rem;
-    }
-
-    ul, ol {
-      padding-left: 1.8rem;
-      margin: 1rem 0;
-    }
-
-    code, pre {
-      background: #111122;
-      padding: 0.2em 0.4em;
-      border-radius: 6px;
-      font-family: 'Consolas', 'Courier New', monospace;
-    }
-
-    pre {
-      padding: 1.2rem;
-      overflow-x: auto;
-      margin: 1.2rem 0;
-    }
-
-    .highlight {
-      color: #a78bfa;
-      font-weight: 500;
-    }
-
-    /* Мобільна адаптація */
-    @media (max-width: 640px) {
-      section { padding: 3rem 0; }
-      .content-card { padding: 1.4rem; }
-      header { padding: 2rem 1rem 3.5rem; }
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 2.6rem; }
-      .day-header { font-size: 2.1rem; }
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>LAVANDA AUDIT</h1>
-  <div class="subtitle">IBONARIUM · CHRONOS 7D · STATE VECTOR · PLANETARY INDEX</div>
-</header>
+<div class="stack">
 
-<div class="container">
+    <!-- DAY 1 -->
+    <section class="page">
+        <iframe 
+            src="https://lavandaaudit.github.io/day1/"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </section>
 
-  <!-- ==================== DAY 1 ==================== -->
-  <section id="day1">
-    <h2 class="day-header">DAY 1</h2>
-
-    <div class="content-card">
-      <h3>IBONARIUM · CHRONOS 7D · SUBIECTIVE</h3>
-      
-      <p>Тут розміщується весь основний вміст вашої сторінки <strong>day1</strong>.</p>
-      
-      <p>Скопіюйте сюди весь HTML-вміст з &lt;body&gt; оригінальної сторінки day1 (без &lt;head&gt; та &lt;html&gt;), або залиште тільки текст/таблиці/графіки, які хочете показати.</p>
-
-      <ul>
-        <li>Приклад пункту 1</li>
-        <li>Приклад пункту 2 з <span class="highlight">виділенням</span></li>
-        <li>Дуже довгий текст, який має гарно переноситись на мобільних пристроях і не ламати layout</li>
-      </ul>
-
-      <pre><code>// приклад коду
-function example() {
-  console.log("Day 1 data loaded");
-  return 42;
-}</code></pre>
-    </div>
-
-    <!-- додайте сюди ще скільки потрібно блоків/карток з day1 -->
-  </section>
-
-
-  <!-- ==================== DAY 2 ==================== -->
-  <section id="day2">
-    <h2 class="day-header">DAY 2</h2>
-
-    <div class="content-card">
-      <h3>STATE VECTOR · PLANETARY INDEX</h3>
-      
-      <p>А тут вміст сторінки <strong>day2</strong>.</p>
-      
-      <p>Скопіюйте сюди весь текст, таблиці, графіки, списки тощо з оригінальної day2.</p>
-
-      <div style="margin: 2rem 0; padding: 1.5rem; background:#111122; border-radius:12px;">
-        <strong>Важливе зауваження:</strong> вставляйте сюди реальний контент, а не цей приклад.
-      </div>
-
-      <table style="width:100%; border-collapse:collapse; margin:1.5rem 0;">
-        <tr style="background:#1e1e38;">
-          <th style="padding:12px; text-align:left;">Параметр</th>
-          <th style="padding:12px; text-align:right;">Значення</th>
-        </tr>
-        <tr>
-          <td>Vector magnitude</td>
-          <td style="text-align:right;">0.874</td>
-        </tr>
-        <tr>
-          <td>Planetary alignment</td>
-          <td style="text-align:right;">Phase 4</td>
-        </tr>
-      </table>
-    </div>
-
-    <!-- сюди можна додати ще кілька блоків з day2 -->
-  </section>
+    <!-- DAY 2 -->
+    <section class="page">
+        <iframe 
+            src="https://lavandaaudit.github.io/day2/"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </section>
 
 </div>
-
-<footer style="text-align:center; padding:3rem 1rem; color:#777799; font-size:0.95rem;">
-  © 2025–2026 Lavanda Audit · All rights reserved<br>
-  <a href="https://github.com/lavandaaudit" style="color:#a78bfa; text-decoration:none;">github.com/lavandaaudit</a>
-</footer>
 
 </body>
 </html>
